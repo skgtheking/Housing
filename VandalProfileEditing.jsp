@@ -12,7 +12,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Vandal Living</title>
+        <title></title>
     </head>
     <body>
         <%
@@ -61,11 +61,12 @@
                     //getting fieldname and value
                     field[k]=f_item.getFieldName();
                     value[k]=f_item.getString();
-                    System.out.println("K-Value[k] :"+k+" "+value[k]);
+                    System.out.println("K="+k+"   field[k]="+field[k]+"  Value[k]="+value[k]);
                     k++;
                 }
                else
                {
+                    //f_item=(FileItem)itr.next();
                     file_name=f_item.getName();
                     field_name=f_item.getFieldName();
 
@@ -81,15 +82,17 @@
                     try
                     {
                         //writing the file object
-                        f_item.write(savedFile);  
+                        f_item.write(savedFile);               
+
                     }
                     catch(Exception ex)
                     {
                         out.println(ex);
                     }
                 }
+
             }
-                           
+                
             String values1="'"+value[0]
             +"','"+value[1]
             +"','"+value[2]
@@ -100,34 +103,51 @@
             +"','"+value[6]
             +"','"+value[7]
             +"','"+value[8]     
-            +"','"+value[9]  
+            +"','"+value[9]   
+                     
             +"','"+fn
             +"'";
-             
-            String columns="firstName,lastName,vandalNumber,cellNumber,email,"
-                    + "dateOfBirth,gender,classification,userName,password,"                
-                    + "profilePicture";  
-            if (!value[9].equals(value[10]) ) 
-            {
-            
-            response.sendRedirect("VandalDetails.jsp");
-            out.print("<script> alert('Password Missmatch')</script>");
-            } 
-            else 
-            {
-                String queryInsert="insert into VandalDetails("+columns+") values ("+values1+")";
-                //System.out.println(queryInsert);
-                boolean status=obj.executeCommand(queryInsert);
-                if(status==true)
-                {                            
-                                response.sendRedirect("Login.jsp");
-                                out.print("<script> alert('Sign-Up Success')</script>");
-                %> 
 
-                <%
-                }    
+            System.out.print(values1);                
+            String values2="firstName='"+value[0]
+            + "',lastName='" +value[1]
+            + "',vandalNumber='" +value[2]
+            + "',cellNumber='" +value[3]
+            + "',email='" +value[4]
+
+            + "',dateOfBirth='" +value[5]
+            + "',gender='" +value[6]
+            + "',classification='" +value[7]
+            + "',userName='" +value[8]    
+            + "',password='" +value[9]  
+
+            + "',profilePicture='" +fn;
+            
+            
+
+            System.out.print(values2);                
+            String queryUpadate = "update VandalDetails set "+values2+ "' where vandalID=" + value[11];  
+                
+            System.out.print(queryUpadate);                
+            boolean status=obj.executeCommand(queryUpadate);
+            if(status==true)
+            {
+                
+                response.sendRedirect("VandalProfile.jsp");
+                out.print("<script> alert('Profile Updated')</script>");
+            %> 
+
+            <%
             }
-                    
+            else
+            {
+                out.print("<script> alert('Filed to Edit Profile')</script>");
+                response.sendRedirect("VandalProfile.jsp");
+            %> 
+
+            <%
+            }
+            
         }   
         %>
     </body>

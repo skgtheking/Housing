@@ -43,11 +43,11 @@
             <div class="col-12 col-sm-6 col-lg-4">
                 <h2 class="font-20 semi-font fables-second-border-color border-bottom pb-3 mb-3">EXPLORE OUR SITE</h2>
                 <ul class="nav fables-footer-links">
-                    <li><a href="../Guest/GuestHomePage.jsp">Home</a></li>
-                    <li><a href="../Guest/Login.jsp">Login</a></li>
-                    <li><a href="../Guest/VandalDetails.jsp">Vandal Sign-up</a></li>
-                    <li><a href="../Guest/LivingSuppliersDetails.jsp">Living Suppliers Sign-up</a></li>
-                    <li><a href="../Guest/Contact.jsp">contact</a></li>
+                    <li><a href="LivingSupplierstHomePage.jsp">Home</a></li>
+                    <li><a href="LivingSuppliersProfile.jsp">Profile</a></li>
+                    <li><a href="AddLivingApartment.jsp">Add Living Apartment</a></li>                    
+                    <li><a href="Contact.jsp">contact</a></li>
+                    <li><a href="../Guest/GuestHomePage.jsp">Logout</a></li>
                     
                 </ul>
             </div>

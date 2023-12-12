@@ -1,5 +1,4 @@
 
-
 <!-- Start Footer 2 Background Image  -->
 <div class="fables-footer-image fables-after-overlay white-color py-4 py-lg-5 bg-rules">
     <div class="container">
@@ -8,9 +7,12 @@
                 <h2 class="font-30 semi-font mb-5">Vandal Living</h2>
                 <form class="form-inline position-relative"> 
                   <div class="form-group fables-subscribe-formgroup"> 
-                    <input type="email" class="form-control fables-subscribe-input fables-btn-rouned" placeholder="Your Email">
+                      <input type="email" class=" fables-btn-rouned" placeholder="Your Email" style="width: 350px;">
                   </div>
-                  <button type="submit" class="btn fables-second-background-color fables-btn-rouned fables-subscribe-btn">Contact</button>
+                    <a href="Contact.jsp" class="fables-second-border-color border-bottom pb-3 d-block mb-3 mt-minus-13">
+                        <button type="button" name="B_S" class="btn fables-second-background-color fables-btn-rouned fables-subscribe-btn">Contact</button>
+                  </a>
+                    
                 </form>
                 
             </div>
@@ -43,11 +45,10 @@
             <div class="col-12 col-sm-6 col-lg-4">
                 <h2 class="font-20 semi-font fables-second-border-color border-bottom pb-3 mb-3">EXPLORE OUR SITE</h2>
                 <ul class="nav fables-footer-links">
-                    <li><a href="../Guest/GuestHomePage.jsp">Home</a></li>
-                    <li><a href="../Guest/Login.jsp">Login</a></li>
-                    <li><a href="../Guest/VandalDetails.jsp">Vandal Sign-up</a></li>
-                    <li><a href="../Guest/LivingSuppliersDetails.jsp">Living Suppliers Sign-up</a></li>
-                    <li><a href="../Guest/Contact.jsp">contact</a></li>
+                    <li><a href="VandalHomePage.jsp">Home</a></li>
+                    <li><a href="VandalProfile.jsp">Profile</a></li>                                   
+                    <li><a href="Contact.jsp">contact</a></li>
+                    <li><a href="../Guest/GuestHomePage.jsp">Sign-out</a></li>  
                     
                 </ul>
             </div>

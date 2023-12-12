@@ -1,7 +1,7 @@
 
 
 <!-- HEADER ONE STARTS-->
-<%@include file="GuestHomeHeader.jsp" %>
+<%@include file="LivingSuppliersHomeHeader.jsp" %>
 <!-- HEADER ONE ENDS-->
 
 <!-- Start Header -->
@@ -392,5 +392,5 @@
 <!-- End   Parteners Slider -->
    
 <!-- HEADER ONE STARTS-->
-<%@include file="GuestHomeFooter.jsp" %>
+<%@include file="LivingSuppliersHomeFooter.jsp" %>
 <!-- HEADER ONE ENDS-->

@@ -16,6 +16,8 @@
     </head>
     <body>
         <%
+        String SSNlivingSuppliersID=session.getAttribute("livingSuppliersID").toString();   
+        String SSNlivingSuppliersName=session.getAttribute("livingSuppliersName").toString();    
         System.out.println("File upload file is strt invoking 2:-");
         String field_name="";
         FileItem f_item=null;
@@ -66,13 +68,14 @@
                 }
                else
                {
+                    //f_item=(FileItem)itr.next();
                     file_name=f_item.getName();
                     field_name=f_item.getFieldName();
 
                     String ext=file_name.substring(file_name.lastIndexOf("."));
                     //setting path to store image
                     File proj_path=new File(config.getServletContext().getRealPath("/"));
-                    String file_path=proj_path.getParentFile().getParentFile().getPath()+"\\web\\Vandal\\ProfilePictures\\";
+                    String file_path=proj_path.getParentFile().getParentFile().getPath()+"\\web\\LivingSuppliers\\ParkingImages\\";
                     Random r=new Random();
                     int r_num=r.nextInt(1111)+999;
                     fn="IMG_"+r_num+ext;
@@ -81,53 +84,41 @@
                     try
                     {
                         //writing the file object
-                        f_item.write(savedFile);  
+                        f_item.write(savedFile);               
+
                     }
                     catch(Exception ex)
                     {
                         out.println(ex);
                     }
                 }
+
             }
                            
-            String values1="'"+value[0]
+            String values1="'"+value[3]
+            +"','"+value[0]        
             +"','"+value[1]
-            +"','"+value[2]
-            +"','"+value[3]
-            +"','"+value[4]
-                    
-            +"','"+value[5]
-            +"','"+value[6]
-            +"','"+value[7]
-            +"','"+value[8]     
-            +"','"+value[9]  
+            +"','"+value[2]        
             +"','"+fn
             +"'";
              
-            String columns="firstName,lastName,vandalNumber,cellNumber,email,"
-                    + "dateOfBirth,gender,classification,userName,password,"                
-                    + "profilePicture";  
-            if (!value[9].equals(value[10]) ) 
-            {
-            
-            response.sendRedirect("VandalDetails.jsp");
-            out.print("<script> alert('Password Missmatch')</script>");
-            } 
-            else 
-            {
-                String queryInsert="insert into VandalDetails("+columns+") values ("+values1+")";
-                //System.out.println(queryInsert);
-                boolean status=obj.executeCommand(queryInsert);
-                if(status==true)
-                {                            
-                                response.sendRedirect("Login.jsp");
-                                out.print("<script> alert('Sign-Up Success')</script>");
-                %> 
+            String columns = "livingSpaceID,parkingType,parkingArea,distance,parkingImage";
 
-                <%
-                }    
+            String queryInsert="insert into parking("+columns+") values ("+values1+")";
+            System.out.println(queryInsert);
+
+            boolean status=obj.executeCommand(queryInsert);
+
+            if(status==true)
+            {                            
+               
+                response.sendRedirect("Parking.jsp?flag=1&livingSpaceID=" + value[3] + "&livingSpaceName=" + value[4] );
+                out.print("<script> alert('Added Success')</script>");           
             }
-                    
+            else
+            {
+                 out.print("<script> alert('Not Success')</script>");  
+            }
         }   
         %>
     </body>
