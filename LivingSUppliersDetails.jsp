@@ -1,199 +1,116 @@
-
-
-<!-- HEADER  STARTS-->
+<!-- HEADER ONE STARTS-->
 <%@include file="GuestHomeHeader.jsp" %>
-
-<div class="div_login">
-        
-    
-<table class="Round_corner_Form_Base">
-    <tr>
-        <td rowspan="3">    
-<!-- HEADER  ENDS-->    
-
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Living Suppliers Details</title>
-        <script type="text/javascript" lang="javascript">
-
-        </script>
-        
-            
-            <style type="text/css">
-               
-                
-            </style>      
-       
-    </head>
-    <body>
-       
-        
-        <form action="LivingSUppliersProfilePictureUpload.jsp" enctype="multipart/form-data" method="post">
-            
-            <table class="Content_Table">
-               <caption>
-                    Living Suppliers Details
-                </caption>  
-               <tr><td>FIRST NAME</td>            
-                   <td> <input type="text"  name="firstName" required="" >  </td></tr>
-
-               <tr><td>LAST NAME</td>
-                   <td><input type="text" name="lastName" required="" >  </td></tr>  
-               
-               <tr><td>ADDRESS</td><td>
-                         <textarea  name="address" required="" ></textarea>  </td></tr> 
-                         
-               <tr><td>POST OFFICE</td>
-                   <td><input type="text" name="postbox" required="">  
-
-                   </td></tr> 
-
-               <tr><td>PLACE</td>
-                   <td>
-                       <input type="text"name="place">
-                           </td></tr>
-
-               <tr><td>PIN CODE</td>
-                   <td>
-                       <input type="number" name="pincode" required="">  </td></tr>   
-
-               <tr><td>STATE</td>
-                   <td>
-                          <select  name="comboState" onchange="getDistrict(this.value);" >   
-                                <option value="">--------Select--------</option> 
-                               
-                        </select>   
-                   </td></tr>
-
- 
-               <tr><td>DISTRICT</td>
-                   <td>
-                          <select  name="comboDistrict" id="comboDistrict" >                     
-                            <option value="">--------Select--------</option>                                 
-                        </select>
-                   </td></tr>
-              
-               <tr>               
-                   <td>GENDER</td>
-                   <td>            
-                   <input type="radio" name="gender" required="" value="Male"> Male
-                   <input type="radio" name="gender" required="" value="Female" checked=""> Female</td></tr>
-
-               <tr><td>CONTACT NUMBER</td>
-                   <td>
-                          <input type="number" name="contactNumber" required="">  </td></tr>  
-               <tr><td>MOBILE NUMBER</td>
-                   <td>
-                          <input type="number" name="mobileNumber" required="">  </td></tr>  
-
-               <tr><td>EMAIL ID</td>
-                   <td>
-                          <input type="email" name="email" value="Shians@gamil.com" required="">  </td></tr> 
-
-               <tr><td>QUALIFICATION</td>
-                   <td>
-                   <input type="text" name="qualification" >  </td></tr>   
-                
-               <tr><td>DATE OF BIRTH</td>
-                   <td>
-                       <input type="date" name="dateOfBirth" required="">
-                   </td></tr>
-
-               <tr>
-                   <td>MARITAL</td>
-                   <td>
-                       <input type="radio" name="maritalStatus" value="Single">Single
-                       <input type="radio" name="maritalStatus" value="Married" checked="">Married</td></tr>
-           
-               <tr><td>USERNAME</td>
-                   <td>
-                        <input type="text" name="userName" required="">  </td></tr> 
-
-               <tr><td>PASSWORD</td>
-                   <td>
-                        <input type="password" name="password" required="">  </td></tr> 
-               
-                <tr><td>RE ENTER PASSWORD</td>
-                   <td>
-                        <input type="password" name="password2" required="">  </td></tr>   
-                
-               <tr><td>RECOVERY QUESTION</td>
-                   <td>
-                        <select   name="recoveryQuestion" >
-                            <option>Select</option>
-                            <option>Favourite Color</option>
-                            <option>Favourite Place</option>
-                            <option>Nick Name</option>
-                        </select>
-                        </td></tr> 
-               
-                <tr><td>ANSWER</td>
-                   <td>
-                        <input type="text" name="answer" required="">  </td></tr>
-                
-                <tr><td>CATEGORY</td>
-                    <td>
-                       <select  name="staffCategoryID">                      
-                          
-                                
-                        </select>
-                    </td></tr>
-                
-               <tr><td>PHOTO</td>
+<!-- HEADER ONE ENDS-->
+     
+<!-- Start Breadcrumbs -->
+<div class="fables-light-background-color ">
+    <div class="container"> 
+        <nav aria-label="breadcrumb">
+            <ol class="fables-breadcrumb breadcrumb px-0 py-3">
+                <li class="breadcrumb-item text-center">
+                    <h3 class="font-35 font-weight-bold fables-main-text-color text-danger">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                        Sign-Up
+                    </h3>
                     
-                    <td>
-                        <input  type="file" name="profilePicture" requird="" /> 
-                   </td>
-               </tr>   
-               <tr>
-                    <td  align="center">
-                        <center>   
-                             <input  type="reset" value="Reset" name="buttonReset" >
-                            </center>
-                    </td>
-                    <td align="center">
-                        <center>   
-                             <input  type="submit" value="Submit" name="B_Submit" >
-                        </center>
-                    </td>
-                </tr>
+                </li>
+            </ol>
+        </nav> 
+    </div>
+</div>
+<!-- /End Breadcrumbs -->
+     
+<!-- Start page content --> 
+<div class="container"> 
+    <div class="row overflow-hidden">
+        <div class="col-12 col-md-10 offset-md-1 mt-5">                    
+          <!-- Added for a Top Space -->                      
+        </div>
+    </div>        
 
-           </table>
-        </form>
-    </body>
-</html>
+    <div class="row mb-4 mb-md-5 overflow-hidden">
+        <div class="col-12 col-sm-7 wow fadeInLeft">
+            <form class="fables-contact-form" action="LivingSuppliersProfilePictureUpload.jsp" enctype="multipart/form-data" method="post">
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label">Living Suppliers Name</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control rounded-0 p-3" name="firstName" required="">
+                  </div>
+                </div>
 
-<!-- FOOTER  STARTS-->
-        </td>
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label">Contact Person Name</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control rounded-0 p-3" name="lastName" required="">
+                  </div>
+                </div>           
 
-        <td>
-            <!-- Small Slide  STARTS-->
-             <img src="../TemplateStyleFiles/img/pic2.jpg" width="580px" height="400px" >
-            <!-- Small Slide  ENDS-->
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <!-- Small Slide  STARTS-->
-             <img src="../TemplateStyleFiles/img/pic2.jpg" width="580px" height="400px" >
-            <!-- Small Slide  ENDS-->
-        </td>
-    </tr>
-     <tr>
-        <td>
-            <!-- Small Slide  STARTS-->
-            <img src="../TemplateStyleFiles/img/pic2.jpg" width="580px" height="400px" >
-            <!-- Small Slide  ENDS-->
-        </td>
-    </tr>
-</table>
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label">Contact Number</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control rounded-0 p-3" name="cellNumber" required="">
+                  </div>
+                </div>
 
-</div>    
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label">Contact Email</label>
+                  <div class="col-sm-8">
+                    <input type="email" class="form-control rounded-0 p-3" name="email" required="">
+                  </div>
+                </div>
 
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label">Company Description</label>
+                  <div class="col-sm-8">
+                   <textarea class="form-control rounded-0 p-3" name="description" required></textarea>
+                  </div>
+                </div>    
+
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label">Username</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control rounded-0 p-3" name="userName" required="">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label">Password</label>
+                  <div class="col-sm-8">
+                    <input type="password" class="form-control rounded-0 p-3" name="password" required="">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label">Re-Enter Password</label>
+                  <div class="col-sm-8">
+                    <input type="password" class="form-control rounded-0 p-3" name="password2" required="">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label">Logo or Company Image</label>
+                  <div class="col-sm-8">
+                    <input type="file" class="form-control rounded-0 p-3" name="profilePicture" >
+                  </div>
+                </div>
+                  <button type="submit" class="btn fables-second-background-color rounded-0 text-white btn-block p-3" name="buttonSubmit">Submit</button>
+            </form>
+        </div>
+        <!-- Added for Display Side Image and Text-->
+        <div class="col-12 col-sm-5 wow fadeInRight">
+            <div class="signup-info">
+                <img src="assets/custom/images/Side1.jpg" alt="Signup Image" class="img-fluid">
+                <p class="text-center mt-3">
+                  Welcome to our platform! Sign up now to join our community and unlock exclusive features. 
+                  Get started on your journey with us today.
+                </p>
+            </div>
+        </div>
+    </div>        
+</div> 
+<!-- /End page content -->
+ 
+<!-- HEADER ONE STARTS-->
 <%@include file="GuestHomeFooter.jsp" %>
-<!-- FOOTER  ENDS-->
-    
+<!-- HEADER ONE ENDS-->
